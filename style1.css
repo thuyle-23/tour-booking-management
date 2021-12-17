@@ -1,0 +1,153 @@
+html {
+	font-size: 62.5%;
+	font-family: "Poppins", sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #a8e6ce;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0;
+}
+.signup {
+	padding: 75px 75px;
+	background-color: white;
+	width: 100%;
+	max-width: 600px;
+	border-radius: 30px;
+}
+.signup-heading {
+	font-size: 50px;
+	font-weight: bold;
+	color: #ff8c94;
+	text-align: center;
+	margin-bottom: 35px;
+	font-family: Comic sans MS;
+}
+.signup-social {
+	padding: 10px;
+	border-radius: 20px;
+	display: block;
+	width: 100%;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Poppins", sans-serif;
+	border: 0;
+	background-color: #4C6FF4;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 0 5px 10px rgba(76, 111, 244, 0.5);
+}
+.signup-social-icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #4C6FF4;
+	font-size: 30px;
+}
+.signup-social-text {
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+}
+.signup-or {
+	text-align: center;
+	font-size: 16px;
+	color: #999;
+	margin: 55px auto;
+	position: relative;
+}
+.signup-or span {
+	display: inline-block;
+	padding: 10px 30px;
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+}
+.signup-or:after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #999;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.signup-label {
+	font-size: 16px;
+	color: #63676B;
+	font-weight: 500;
+	margin-bottom: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+.signup-input {
+	display: block;
+	width: 100%;
+	padding: 25px;
+	border-radius: 14px;
+	background-color: #f2f3f5;
+	outline: none;
+	border: 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+	margin-bottom: 30px;	
+}
+.signup-pollicy {
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 30px;
+	font-style: italic;
+}
+b {
+	font-style: italic;
+	color: #ff8c94;
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	font-style: italic;
+}
+a {
+	font-style: italic;
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	font-style: italic;
+}
+.signup-submit {
+	padding: 25px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	border: 0;
+	outline: none;
+	display: inline-block;
+	width: 100%;
+	border-radius: 14px;
+	background-color: #ff8c94;
+	font-family: "Poppins", sans-serif;
+	cursor: pointer;
+	font-weight: 600;
+	box-shadow: 0 5px 10px rgba(255, 140, 148, 0.5);
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+.signup-already {
+	text-align: center;
+	font-size: 16px;
+	color: #999;
+}.signup-login-link {
+	color: #2979ff;
+	text-decoration: none;
+}
