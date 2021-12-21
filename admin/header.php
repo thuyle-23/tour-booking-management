@@ -122,11 +122,12 @@
                         <i class="fas fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> QUẢN
-                        LÝ THÀNH VIÊN</a>
+                        LÝ CHÍNH</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="khachhang.php" data-toggle="tooltip" data-placement="bottom" title="THÀNH VIÊN">THÀNH VIÊN</a></li>
+                        <li><a href="nhanvien.php" data-toggle="tooltip" data-placement="bottom" title="NHÂN VIÊN">NHÂN VIÊN</a></li>
+                        <li><a href="khachhang.php" data-toggle="tooltip" data-placement="bottom" title="KHÁCH HÀNG">KHÁCH HÀNG</a></li>
                         <li><a href="diadanh.php" data-toggle="tooltip" data-placement="bottom" title="ĐỊA DANH">ĐỊA DANH</a></li>
                         <li><a href="hoadon.php" data-toggle="tooltip" data-placement="bottom" title="HÓA ĐƠN ĐẶT TOUR">HÓA ĐƠN ĐẶT TOUR</a></li>
                         <li><a href="binhluan.php" data-toggle="tooltip" data-placement="bottom" title="BÁO CÁO">BÌNH LUẬN</a></li>
