@@ -26,7 +26,7 @@ h3 {
     <!-- Modal -->
     <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" role="document" id="doctor_form">
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-header">
@@ -36,33 +36,38 @@ h3 {
                     </button>
                 </div>
                 <div class="form-group">
+                <br>
                     <label for="completequyentruycap">Quyền truy cập</label>
-                    <input type="text" class="form-control" id="completequyentruycap" placeholder="1">
+                    <input type="text" class="form-control" id="completequyentruycap" value="1" readonly>
                 </div>
-                <div class="form-group">
-                    <label for="completeuser">Tên đăng nhập</label>
+                <div class="form-group is-valid">
+                    <label for="completeuser">Tên đăng nhập<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="completeuser" placeholder="Nhập tên đăng nhập"
-                        required>
+                    required data-parsely-trigger="keyup">
                 </div>
                 <div class="form-group">
-                    <label for="completepass">Mật khẩu</label>
+                    <label for="completepass">Mật khẩu<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="completepass" placeholder="Nhập mật khẩu" required>
                 </div>
                 <div class="form-group">
-                    <label for="completename">Họ và tên</label>
+                    <label for="completename">Họ và tên<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="completename" placeholder="Nhập họ và tên" required>
                 </div>
                 <div class="form-group">
-                    <label for="completeemail">Email</label>
-                    <input type="text" class="form-control" id="completeemail" placeholder="Nhập email" required>
+                    <label for="completeemail">Email<span class="text-danger"> *</span></label>
+                    <input type="mail" class="form-control" id="completeemail" placeholder="Nhập email" required>
                 </div>
                 <div class="form-group">
-                    <label for="completegioitinh">Giới tính</label>
-                    <input type="text" class="form-control" id="completegioitinh" placeholder="Nhập giới tính" required>
+                    <label for="completegioitinh">Giới tính<span class="text-danger"> *</span></label>
+                    <select class="form-control" id="completegioitinh" name="completegioitinh">
+                            <option selected>Chọn giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
                 </div>
                 <div class="form-group">
                     <label for="completengaysinh">Ngày sinh</label>
-                    <input type="text" class="form-control" id="completengaysinh" placeholder="Nhập ngày sinh"
+                    <input type="date" class="form-control" id="completengaysinh" placeholder="Nhập ngày sinh"
                         required>
                 </div>
                 <div class="form-group">
@@ -102,29 +107,33 @@ h3 {
                     </button>
                 </div>
                 <div class="form-group">
-                    <label for="updateuser">Tên đăng nhập</label>
+                    <br>
+                    <label for="updateuser">Tên đăng nhập<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updateuser" placeholder="Nhập tên đăng nhập"
                         required>
                 </div>
                 <div class="form-group">
-                    <label for="updatepass">Mật khẩu</label>
+                    <label for="updatepass">Mật khẩu<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updatepass" placeholder="Nhập mật khẩu" required>
                 </div>
                 <div class="form-group">
-                    <label for="updatename">Họ và tên</label>
+                    <label for="updatename">Họ và tên<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updatename" placeholder="Nhập họ và tên" required>
                 </div>
                 <div class="form-group">
-                    <label for="updateemail">Email</label>
+                    <label for="updateemail">Email<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updateemail" placeholder="Nhập email" required>
                 </div>
                 <div class="form-group">
-                    <label for="updategioitinh">Giới tính</label>
-                    <input type="text" class="form-control" id="updategioitinh" placeholder="Nhập giới tính" required>
-                </div>
+                    <label for="updategioitinh">Giới tính<span class="text-danger"> *</span></label>
+                    <select class="form-control" id="updategioitinh" name="updategioitinh">
+                            <option selected>Chọn giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>                </div>
                 <div class="form-group">
                     <label for="updatengaysinh">Ngày sinh</label>
-                    <input type="text" class="form-control" id="updatengaysinh" placeholder="Nhập ngày sinh"
+                    <input type="date" class="form-control" id="updatengaysinh" placeholder="Nhập ngày sinh"
                         required>
                 </div>
                 <div class="form-group">
@@ -319,3 +328,5 @@ const myFunction = () => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="http://parsleyjs.org/dist/parsley.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />

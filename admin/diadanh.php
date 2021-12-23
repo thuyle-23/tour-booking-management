@@ -37,21 +37,25 @@ h3 {
                     </button>
                 </div>
                 <div class="form-group">
-                    <label for="completetendiadiem">Tên địa điểm</label>
+                    <label for="completetendiadiem">Tên địa điểm<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="completetendiadiem" placeholder="Nhập tên địa điểm"
                         required>
                 </div>
                 <div class="form-group">
-                    <label for="completetieude">Tiêu đề</label>
+                    <label for="completetendd">Hình ảnh địa điểm<span class="text-danger"> *</span></label>
+                    <input type="file"  id="completehinhanhdd" placeholder="Nhập hình ảnh địa điểm">
+                </div>
+                <div class="form-group">
+                    <label for="completetieude">Tiêu đề<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="completetieude" placeholder="Nhập tiêu đề" required>
                 </div>
-                <!-- <div class="form-group">
-                    <label for="completenoidung">Nội dung</label>
-                    <input type="text" class="form-control" id="completenoidung" placeholder="Nhập nội dung">
-                </div> -->
                 <div class="form-group">
-                    <label for="completengaydang">Ngày đăng</label>
-                    <input type="text" class="form-control" id="completengaydang" placeholder="Nhập ngày đăng" required>
+                    <label for="completenoidung">Nội dung<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" id="completenoidung" placeholder="Nhập nội dung">
+                </div>
+                <div class="form-group">
+                    <label for="completengaydang">Ngày đăng<span class="text-danger"> *</span></label>
+                    <input type="date" class="form-control" id="completengaydang" placeholder="Nhập ngày đăng" required>
                 </div>
                 <div class="form-group">
                     <label for="completeluotxem">Lượt xem</label>
@@ -62,7 +66,7 @@ h3 {
                     <input type="text" class="form-control" id="completeid" placeholder="Nhập ID" required>
                 </div>
                 <div class="form-group">
-                    <label for="completesotien1nguoi">Số tiền 1 người</label>
+                    <label for="completesotien1nguoi">Số tiền 1 người<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="completesotien1nguoi" placeholder="Nhập số tiền"
                         required>
                 </div>
@@ -88,20 +92,24 @@ h3 {
                     </button>
                 </div>
                 <div class="form-group">
-                    <label for="updatetendiadiem">Tên địa điểm</label>
+                    <label for="updatetendiadiem">Tên địa điểm<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updatetendiadiem" placeholder="Nhập tên địa điểm">
                 </div>
                 <div class="form-group">
-                    <label for="updatetieude">Tiêu đề</label>
+                    <label for="updatetendd">Hình ảnh địa điểm<span class="text-danger"> *</span></label>
+                    <input type="file"  id="updatehinhanhdd" placeholder="Nhập hình ảnh địa điểm">
+                </div>
+                <div class="form-group">
+                    <label for="updatetieude">Tiêu đề<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updatetieude" placeholder="Nhập tiêu đề">
                 </div>
                 <div class="form-group">
-                    <label for="updatenoidung">Nội dung</label>
+                    <label for="updatenoidung">Nội dung<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updatenoidung" placeholder="Nhập nội dung">
                 </div>
                 <div class="form-group">
-                    <label for="updatengaydang">Ngày đăng</label>
-                    <input type="text" class="form-control" id="updatengaydang" placeholder="Nhập ngày đăng">
+                    <label for="updatengaydang">Ngày đăng<span class="text-danger"> *</span></label>
+                    <input type="date" class="form-control" id="updatengaydang" placeholder="Nhập ngày đăng">
                 </div>
                 <div class="form-group">
                     <label for="updateluotxem">Lượt xem</label>
@@ -112,7 +120,7 @@ h3 {
                     <input type="text" class="form-control" id="updateid" placeholder="Nhập ID">
                 </div>
                 <div class="form-group">
-                    <label for="updatesotien1nguoi">Số tiền 1 người</label>
+                    <label for="updatesotien1nguoi">Số tiền 1 người<span class="text-danger"> *</span></label>
                     <input type="text" class="form-control" id="updatesotien1nguoi" placeholder="Nhập số tiền">
                 </div>
             </div>
@@ -157,6 +165,7 @@ function GetDetails(updatemadiadiem) {
         var userid = JSON.parse(data);
         $('#updatetendiadiem').val(userid.tendiadiem);
         $('#updatetieude').val(userid.tieude);
+        $('#updatehinhanhdd').val(userid.hinhanhdd);
         $('#updatenoidung').val(userid.noidung);
         $('#updatengaydang').val(userid.ngaydang);
         $('#updateluotxem').val(userid.luotxem);
@@ -169,6 +178,7 @@ function GetDetails(updatemadiadiem) {
 function updateDetails() {
     var updatetendiadiem = $('#updatetendiadiem').val();
     var updatetieude = $('#updatetieude').val();
+    var updatehinhanhdd = $('#updatehinhanhdd').val();
     var updatenoidung = $('#updatenoidung').val();
     var updatengaydang = $('#updatengaydang').val();
     var updateluotxem = $('#updateluotxem').val();
@@ -180,6 +190,7 @@ function updateDetails() {
     $.post("updatediadanh.php", {
         updatetendiadiem: updatetendiadiem,
         updatetieude: updatetieude,
+        updatehinhanhdd: updatehinhanhdd,
         updatenoidung: updatenoidung,
         updatengaydang: updatengaydang,
         updateluotxem: updateluotxem,
@@ -214,10 +225,10 @@ function displayData() {
 
 
 function adduser() {
-    // var themhinhanhdd = $('#completehinhanhdd').val();
+    var themhinhanhdd = $('#completehinhanhdd').val();
     var themtendiadiem = $('#completetendiadiem').val();
     var themtieude = $('#completetieude').val();
-    // var themnoidung = $('#completenoidung').val();
+    var themnoidung = $('#completenoidung').val();
     var themngaydang = $('#completengaydang').val();
     var themluotxem = $('#completeluotxem').val();
     var themid = $('#completeid').val();
@@ -227,10 +238,10 @@ function adduser() {
         url: "insertdiadanh.php",
         type: "post",
         data: {
-            // hinhanhddsend: themhinhanhdd,
+            hinhanhddsend: themhinhanhdd,
             tendiadiemsend: themtendiadiem,
             tieudesend: themtieude,
-            // noidungsend: themnoidung,
+            noidungsend: themnoidung,
             ngaydangsend: themngaydang,
             luotxemsend: themluotxem,
             idsend: themid,

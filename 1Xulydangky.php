@@ -12,6 +12,7 @@ if (isset($_POST['user']) && isset($_POST['name']) && isset($_POST['email'])
 	   return $data;
 	}
 
+	
 	$user = validate($_POST['user']);
     $name = validate($_POST['name']);
     $email = validate($_POST['email']);

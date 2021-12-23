@@ -21,6 +21,7 @@ if (isset($_POST['updatemadiadiem'])){
 if(isset($_POST['hiddendata'])){
     $uniquemadiadiem=$_POST['hiddendata'];
     $tendiadiem=$_POST['updatetendiadiem'];
+    $hinhanhdd=$_POST['updatehinhanhdd'];
     $tieude=$_POST['updatetieude'];
     $noidung=$_POST['updatenoidung'];
     $ngaydang=$_POST['updatengaydang'];
@@ -28,7 +29,7 @@ if(isset($_POST['hiddendata'])){
     $id=$_POST['updateid'];
     $sotien1nguoi=$_POST['updatesotien1nguoi'];
 
-    $sql="UPDATE `diadiem` SET tendiadiem='$tendiadiem', tieude='$tieude', 
+    $sql="UPDATE `diadiem` SET tendiadiem='$tendiadiem', hinhanhdd='$hinhanhdd', tieude='$tieude', 
     noidung='$noidung', ngaydang='$ngaydang', luotxem='$luotxem', 
     id='$id', sotien1nguoi='$sotien1nguoi' WHERE madiadiem=$uniquemadiadiem";
 

@@ -35,28 +35,32 @@ h3 {
                     </button>
                 </div>
                 <div class="form-group">
-                    <label for="completeuser">Tên đăng nhập</label>
+                <br>
+                    <label for="completeuser">Tên đăng nhập <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="completeuser" placeholder="Nhập tên đăng nhập">
                 </div>
                 <div class="form-group">
-                    <label for="completepass">Mật khẩu</label>
+                    <label for="completepass">Mật khẩu <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="completepass" placeholder="Nhập mật khẩu">
                 </div>
                 <div class="form-group">
-                    <label for="completename">Họ và tên</label>
+                    <label for="completename">Họ và tên <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="completename" placeholder="Nhập họ và tên">
                 </div>
                 <div class="form-group">
-                    <label for="completeemail">Email</label>
-                    <input type="text" class="form-control" id="completeemail" placeholder="Nhập email">
+                    <label for="completeemail">Email <span class="text-danger">*</span></label>
+                    <input type="mail" class="form-control" id="completeemail" placeholder="Nhập email">
                 </div>
                 <div class="form-group">
-                    <label for="completegioitinh">Giới tính</label>
-                    <input type="text" class="form-control" id="completegioitinh" placeholder="Nhập giới tính">
-                </div>
+                    <label for="completegioitinh">Giới tính <span class="text-danger">*</span></label>
+                    <select class="form-control" id="completegioitinh" name="completegioitinh">
+                            <option selected>Chọn giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>                </div>
                 <div class="form-group">
                     <label for="completengaysinh">Ngày sinh</label>
-                    <input type="text" class="form-control" id="completengaysinh" placeholder="Nhập ngày sinh">
+                    <input type="date" class="form-control" id="completengaysinh" placeholder="Nhập ngày sinh">
                 </div>
                 <div class="form-group">
                     <label for="completesodt">Số điện thoại</label>
@@ -92,28 +96,32 @@ h3 {
                     </button>
                 </div>
                 <div class="form-group">
-                    <label for="updateuser">Tên đăng nhập</label>
+                <br>
+                    <label for="updateuser">Tên đăng nhập <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="updateuser" placeholder="Nhập tên đăng nhập">
                 </div>
                 <div class="form-group">
-                    <label for="updatepass">Mật khẩu</label>
+                    <label for="updatepass">Mật khẩu <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="updatepass" placeholder="Nhập mật khẩu">
                 </div>
                 <div class="form-group">
-                    <label for="updatename">Họ và tên</label>
+                    <label for="updatename">Họ và tên <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="updatename" placeholder="Nhập họ và tên">
                 </div>
                 <div class="form-group">
-                    <label for="updateemail">Email</label>
+                    <label for="updateemail">Email <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="updateemail" placeholder="Nhập email">
                 </div>
                 <div class="form-group">
-                    <label for="updategioitinh">Giới tính</label>
-                    <input type="text" class="form-control" id="updategioitinh" placeholder="Nhập giới tính">
-                </div>
+                    <label for="updategioitinh">Giới tính <span class="text-danger">*</span></label>
+                    <select class="form-control" id="updategioitinh" name="updategioitinh">
+                            <option selected>Chọn giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>                </div>
                 <div class="form-group">
                     <label for="updatengaysinh">Ngày sinh</label>
-                    <input type="text" class="form-control" id="updatengaysinh" placeholder="Nhập ngày sinh">
+                    <input type="date" class="form-control" id="updatengaysinh" placeholder="Nhập ngày sinh">
                 </div>
                 <div class="form-group">
                     <label for="updatesodt">Số điện thoại</label>

@@ -4,7 +4,7 @@ include('Header.php');
 <div class="container-fluid al">
     <div id="clock"></div>
     <Br>
-    <p class="timkiemnhanvien"><b>TÌM KIẾM HÓA ĐƠN:</b></p><Br><Br>
+    <p class="timkiemhoadon"><b>TÌM KIẾM HÓA ĐƠN:</b></p><Br><Br>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Nhập mã hóa đơn cần tìm...">
     <i class="fa fa-search" aria-hidden="true"></i>
 

@@ -24,7 +24,7 @@ if(isset($_POST['displaySend'])){
         $madiadiem=$row['madiadiem'];
         $tendiadiem=$row['tendiadiem'];
         $tieude=$row['tieude'];
-        // $noidung=$row['noidung'];
+        $noidung=$row['noidung'];
         $ngaydang=$row['ngaydang'];
         $luotxem=$row['luotxem'];
         $id=$row['id'];

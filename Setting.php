@@ -145,7 +145,7 @@
                                                             </div>
                                                             <div>
                                                                 <label>Ngày sinh</label>
-                                                                <input type="text" value="<?php echo $row[8] ?>" name="ngaysinh">
+                                                                <input type="date" value="<?php echo $row[8] ?>" name="ngaysinh">
                                                             </div>
                                                             <div>
                                                                 <label>Tiểu sử</label>
