@@ -82,7 +82,7 @@ $resultbinhluan = $connect->query($sqlbinhluan);
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="dd"><b>ĐỊA ĐIỂM BẠN MUỐN ĐI</b></label>
-                            <input type="text" class="form-control" id="dd" name="diadiemdi" placeholder="Select a location..." style="background: gainsboro" value="<?php echo $rownguoidung[10]; ?>">
+                            <input type="text" class="form-control" id="dd" name="diadiemdi" placeholder="Select a location..." style="background: gainsboro" value="<?php echo $rownguoidung[10]; ?>" readonly>
                         </div>
                         <div class="form-group">
                             <label for="khoihanh"><b>NGÀY KHỞI HÀNH</b></label>
