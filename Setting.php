@@ -178,7 +178,7 @@
                                                         </div>
                                                         <div>
                                                             <label>Địa chỉ</label>
-                                                            <input type="email" value="<?php echo $row[10] ?>"
+                                                            <input type="text" value="<?php echo $row[10] ?>"
                                                                 name="diachi">
                                                         </div>
                                                         <button type="submit" data-ripple="" name="thoat"
