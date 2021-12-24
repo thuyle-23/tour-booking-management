@@ -40,7 +40,7 @@
             <button class="signin-submit" id="dangnhap" name="dangnhap">Đăng nhập</button>
 
             <p class="signin-enror">
-                <a href="change_password.php" class="signin-enror-password">Quên mật khẩu?</a>
+                <a href="#" class="signin-enror-password">Quên mật khẩu?</a>
             </p>
             <div class="signin-new"></div>
             <b class="signin-suggest">Bạn vừa biết đến Cityescape?</b>

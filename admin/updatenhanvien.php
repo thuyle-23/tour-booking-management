@@ -30,11 +30,25 @@ if(isset($_POST['hiddendata'])){
     $diachi=$_POST['updatediachi'];
     $tieusu=$_POST['updatetieusu'];
 
-    $sql="UPDATE `users` SET user='$user', pass='$pass', 
+    $sql = "SELECT * FROM users WHERE user='$user', pass='$pass', 
     name='$name', email='$email', gioitinh='$gioitinh', 
-    ngaysinh='$ngaysinh', sodt='$sodt', diachi='$diachi', tieusu='$tieusu' WHERE id=$uniqueid";
+    ngaysinh='$ngaysinh', sodt='$sodt', diachi='$diachi', tieusu='$tieusu'";
+	$result = mysqli_query($connect, $sql);
+    if (mysqli_num_rows($result) > 0) {
+///////////////////////////////////
+        exit();
+    } else {
+        $sql2= "UPDATE `users` SET user='$user', pass='$pass', 
+        name='$name', email='$email', gioitinh='$gioitinh', 
+        ngaysinh='$ngaysinh', sodt='$sodt', diachi='$diachi', tieusu='$tieusu' WHERE id=$uniqueid";
+        $result2 = mysqli_query($connect, $sql2);
+    }
+    
+    // $sql="UPDATE `users` SET user='$user', pass='$pass', 
+    // name='$name', email='$email', gioitinh='$gioitinh', 
+    // ngaysinh='$ngaysinh', sodt='$sodt', diachi='$diachi', tieusu='$tieusu' WHERE id=$uniqueid";
 
-    $result=mysqli_query($connect, $sql);
+    // $result=mysqli_query($connect, $sql);
 
 }
 

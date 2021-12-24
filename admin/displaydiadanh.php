@@ -11,7 +11,6 @@ if(isset($_POST['displaySend'])){
         <th width="520px">Tiêu đề</th>
         <th width="90px">Ngày đăng</th>
         <th width="50px">Lượt xem</th>
-        <th width="100px">Mã người dùng</th>
         <th width="90px">Số tiền đặt tour</th>
         <th width="90px">Sửa</th>
         <th width="90px">Xóa</th>
@@ -27,7 +26,7 @@ if(isset($_POST['displaySend'])){
         $noidung=$row['noidung'];
         $ngaydang=$row['ngaydang'];
         $luotxem=$row['luotxem'];
-        $id=$row['id'];
+        // $id=$row['id'];
         $sotien1nguoi=$row['sotien1nguoi'];
 
         $table.=' <tr>
@@ -37,7 +36,6 @@ if(isset($_POST['displaySend'])){
         
         <td>'.$ngaydang.'</td>
         <td>'.$luotxem.'</td>
-        <td>'.$id.'</td>
         <td>'.$sotien1nguoi.'</td>
 
         <td>

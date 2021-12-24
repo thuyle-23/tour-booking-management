@@ -26,12 +26,10 @@ if(isset($_POST['hiddendata'])){
     $noidung=$_POST['updatenoidung'];
     $ngaydang=$_POST['updatengaydang'];
     $luotxem=$_POST['updateluotxem'];
-    $id=$_POST['updateid'];
     $sotien1nguoi=$_POST['updatesotien1nguoi'];
 
     $sql="UPDATE `diadiem` SET tendiadiem='$tendiadiem', hinhanhdd='$hinhanhdd', tieude='$tieude', 
-    noidung='$noidung', ngaydang='$ngaydang', luotxem='$luotxem', 
-    id='$id', sotien1nguoi='$sotien1nguoi' WHERE madiadiem=$uniquemadiadiem";
+    noidung='$noidung', ngaydang='$ngaydang', luotxem='$luotxem', sotien1nguoi='$sotien1nguoi' WHERE madiadiem=$uniquemadiadiem";
 
     $result=mysqli_query($connect, $sql);
 
