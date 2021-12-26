@@ -14,6 +14,7 @@ if(isset($_POST['displaySend'])){
     <th width="auto">Số điện thoại</th>
     <th width="auto">Số lượng người</th>
     <th width="auto">Tổng tiền</th>
+    <th width="auto">Xác nhận hóa đơn</th>
     <th width="90px">Xóa</th>
 </tr>
     </thead>';
@@ -30,6 +31,7 @@ if(isset($_POST['displaySend'])){
         $sodienthoai=$row['sodienthoai'];
         $soluongnguoi=$row['soluongnguoi'];
         $tongtien=$row['tongtien'];
+        $trangthai=$row['trangthai'];
 
         $table.=' <tr>
         <td scope="row">'.$mahoadon.'</td>
@@ -41,6 +43,8 @@ if(isset($_POST['displaySend'])){
         <td>'.$sodienthoai.'</td>
         <td>'.$soluongnguoi.'</td>
         <td>'.$tongtien.'</td>
+        <td> <a href=cancel_hoadon.php?mahoadon=".$mahoadon." class="btn btn-danger">Xác nhận</a>
+        </td>
         <td>
         <button class="btn btn-danger" onclick="DeleteUser('.$mahoadon.')">Xóa</button>
         </td>

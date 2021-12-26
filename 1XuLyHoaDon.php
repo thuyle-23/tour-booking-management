@@ -9,9 +9,8 @@ if (isset($_POST['dattour'])) {
     $ngayketthuc = (String)$_POST['ngayketthuc'];
     $dienthoai = (double)$_POST['dienthoai'];
     $soluongnguoi = (int)$_POST['soluongnguoi'];
-    $tongtien = (double)$_POST['sotientra']*(double)$_POST['soluongnguoi'];
-    $trangthai=0;
-    $sql = "INSERT INTO hoadon(id, diadiemdi, diadiemden, ngaykhoihanh, ngayketthuc, sodienthoai, soluongnguoi, tongtien, trangthai) VALUES ($id, '$diadiemdi', '$diadiemden', '$ngaykhoihanh', '$ngayketthuc', $dienthoai, $soluongnguoi, $tongtien, $trangthai)";
+    $tongtien = (double)$_POST['sotientra']*(double)$_POST['soluongnguoi'];;
+    $sql = "INSERT INTO hoadon(id, diadiemdi, diadiemden, ngaykhoihanh, ngayketthuc, sodienthoai, soluongnguoi, tongtien, trangthai) VALUES ($id, '$diadiemdi', '$diadiemden', '$ngaykhoihanh', '$ngayketthuc', '$dienthoai', '$soluongnguoi', '$tongtien', '$trangthai')";
     
 //    $sqlxoatrung = "DELETE FROM hoadon WHERE id=$id";
 //    $connect->query($sqlxoatrung);

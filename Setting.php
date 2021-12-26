@@ -30,13 +30,13 @@
 </head>
 <style>
 .success {
-   background: #D4EDDA;
-   color: #40754C;
-   padding: 10px;
-   width: 100%;
-   border-radius: 5px;
-   margin: 20px auto;
-   font-size: 15px;
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 20px auto;
+    font-size: 15px;
 }
 </style>
 <?php
@@ -137,12 +137,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="stg-form-area">
-                                                <?php if (isset($_GET['success'])) { ?>
-               <p class="success"><?php echo $_GET['success']; ?></p>
-          <?php } ?>
+                                                    <?php if (isset($_GET['success'])) { ?>
+                                                    <p class="success"><?php echo $_GET['success']; ?></p>
+                                                    <?php } ?>
                                                     <form method="post" class="c-form" action="Setting.php" id="form">
                                                         <div class="uzer-nam">
-                                                            <label>Tên tài khoản<span class="text-danger"> *</span></label>
+                                                            <label>Tên tài khoản<span class="text-danger">
+                                                                    *</span></label>
                                                             <input type="text" value="<?php echo $row[3] ?>" name="tk"
                                                                 required readonly>
                                                         </div>
@@ -152,7 +153,8 @@
                                                                 name="hoten" required>
                                                         </div>
                                                         <div>
-                                                            <label>Địa chỉ mail<span class="text-danger"> *</span></label>
+                                                            <label>Địa chỉ mail<span class="text-danger">
+                                                                    *</span></label>
                                                             <input type="text" value="<?php echo $row[6] ?>"
                                                                 name="email" required>
                                                         </div>
@@ -231,8 +233,7 @@
     <table class="table table-bordered" id="myTable">
 
         <tr class="ex">
-            <th width="auto">Mã hóa đơn</th>
-            <th width="auto">Mã thành viên</th>
+            <th width="auto">STT</th>
             <th width="auto">Địa điểm đi</th>
             <th width="auto">Địa điểm đến</th>
             <th width="auto">Ngày khởi hành</th>
@@ -240,26 +241,53 @@
             <th width="auto">Số điện thoại</th>
             <th width="auto">Số lượng người</th>
             <th width="auto">Tổng tiền</th>
+            <th width="auto">Trạng thái</th>
+            <th width="auto"></th>
         </tr>
 
 
         <?php
             include "1connect.php";
-            $str = "select* from hoadon, users where hoadon.id=users.id and dangnhap=1 ";
-            $result = $connect->query($str);
-            while ($row = $result->fetch_row()) {
+            $str = "select * from hoadon, users where hoadon.id=users.id and dangnhap=1 ";
+            $result=mysqli_query($connect,$str);
+            $number=1;
+            while($row=mysqli_fetch_assoc($result)) {
                 ?>
         <tr>
-            <td><?php echo $row[2]; ?></td>
-            <td><?php echo $row[3]; ?></td>
-            <td><?php echo $row[4]; ?></td>
-            <td><?php echo $row[5]; ?></td>
-            <td><?php echo $row[6]; ?></td>
-            <td><?php echo $row[7]; ?></td>
-            <td><?php echo $row[8]; ?></td>
+            <td><?php echo $number; ?></td>
+            <td><?php echo $row['diadiemdi']; ?></td>
+            <td><?php echo $row['diadiemden']; ?></td>
+            <td><?php echo $row['ngaykhoihanh']; ?></td>
+            <td><?php echo $row['ngayketthuc']; ?></td>
+            <td><?php echo $row['sodienthoai']; ?></td>
+            <td><?php echo $row['soluongnguoi']; ?></td>
+            <td><?php echo $row['tongtien']; ?></td>
+            <td>
+                <?php 
+                        if($row['trangthai']=="1") {
+                            echo "Đã tiếp nhận";
+                        }
+                        elseif ($row['trangthai']=="0") {
+                            echo "Chờ xác nhận";
+                        }
+                        elseif ($row['trangthai']=="2")
+                        {
+                            echo "Hủy đơn thành công";
+                        }
+                ?>
+            </td>
+            <td>
+                <?php 
+                        if($row['trangthai']=="0")
+                            echo "<a href=cancel_hoadon.php?mahoadon='".$row['mahoadon']."'>Hủy yêu cầu</a>";
+                ?>
+            </td>
         </tr>
         <?php
+        $number++;
+        
             }
+            
             ?>
 
     </table>

@@ -250,7 +250,7 @@ function updateDetails() {
         $('#updatepass').focus();
         return false;
     } else if (!reg_pass.test(updatepass)) {
-        alert('Mật khẩu phải có độ dài từ 6 đến 32 và không chứa ký tự đặc biệt.');
+        alert('Mật khẩu phải có độ dài từ 4 đến 32 và không chứa ký tự đặc biệt.');
         $('#updatepass').focus();
         return false;
     } else if (updatename.trim() == '') {

@@ -37,13 +37,13 @@
                 <?php if (isset($_GET['success'])) { ?>
                 <p class="success"><?php echo $_GET['success']; ?></p>
                 <?php } ?>
-                <label for="fullname" class="signin-label">Tên đăng nhập</label>
+                <label for="fullname" class="signin-label">Tên đăng nhập<span class="text-danger"> *</span></label>
                 <input type="text" id="uname" class="signin-input" placeholder="Eg: John Doe" name="uname">
-                <label for="fullname" class="signin-label">Mật khẩu cũ</label>
+                <label for="fullname" class="signin-label">Mật khẩu cũ<span class="text-danger"> *</span></label>
                 <input type="password" id="opw" class="signin-input" placeholder="abc123" name="opw">
-                <label for="password" class="signin-label">Mật khẩu mới</label>
+                <label for="password" class="signin-label">Mật khẩu mới<span class="text-danger"> *</span></label>
                 <input type="password" id="npw" class="signin-input" placeholder="abc123" name="npw">
-                <label for="password" class="signin-label">Xác nhận mật khẩu mới</label>
+                <label for="password" class="signin-label">Xác nhận mật khẩu mới<span class="text-danger"> *</span></label>
                 <input type="password" id="cpw" class="signin-input" placeholder="abc123" name="cpw">
                 <button class="signin-submit" id="dangnhap" name="dangnhap">Xác nhận</button>
 

@@ -42,15 +42,15 @@
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
           <!-- <p><span class="error">* required field</span></p> -->
-                <label for="username" class="signup-label">Tên đăng nhập*</label>
+                <label for="username" class="signup-label">Tên đăng nhập<span class="text-danger"> *</span></label>
                 <input type="text" id="fulname" class="signup-input" placeholder="Eg: JohnDoe" name="user" required>
-                <label for="fullname" class="signup-label">Họ và tên*</label>
+                <label for="fullname" class="signup-label">Họ và tên<span class="text-danger"> *</span></label>
                 <input type="text" id="fulname" class="signup-input" placeholder="Eg: John Doe" name="name" required>
-                <label for="email" class="signup-label">Địa chỉ email*</label>
+                <label for="email" class="signup-label">Địa chỉ email<span class="text-danger"> *</span></label>
                 <input type="email" id="email" class="signup-input" placeholder="gmail.com" name="email" required>
-                <label for="password" class="signup-label">Mật khẩu*</label>
+                <label for="password" class="signup-label">Mật khẩu<span class="text-danger"> *</span></label>
                 <input type="password" id="password" class="signup-input" placeholder="abc123" name="pass" required>
-                <label for="confirm" class="signup-label">Xác nhận mật khẩu*</label>
+                <label for="confirm" class="signup-label">Xác nhận mật khẩu<span class="text-danger"> *</span></label>
                 <input type="password" id="confirm" class="signup-input" placeholder="abc123" name="re_pass" required>
                 <label for="pollicy" class="signup-pollicy">
                     <input type="radio" id="pollicy" class="signup-pollicy" name="pollicy" value="pollicy">Tôi đồng ý với Cityspace về <b>Điều khoản dịch vụ</b> <a>và</a> <b>Chính sách bảo mật</b></label>

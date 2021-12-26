@@ -26,25 +26,35 @@ if (isset($_POST['user']) && isset($_POST['name']) && isset($_POST['email'])
 	if (empty($user)) {
 		header("Location: Joinwithus.php?error=Tên đăng nhập không được để trống&$user_data");
 	    exit();
-	}else if(empty($pass)){
+	}
+	else if(!preg_match("/^[A-Za-z0-9_\.]{1,31}$/",$user)) {
+        header("Location: Joinwithus.php?error=Tên đăng nhập chỉ được chứa ký tự thường, in hoa và số");
+	    exit();
+	}
+	else if(empty($name)){
+        header("Location: Joinwithus.php?error=Họ và tên không được để trống&$user_data");
+	    exit();
+	}
+	else if(!preg_match("/^([\w_\.!@#$%^&*()]+)*/",$name)){
+        header("Location: Joinwithus.php?error=Họ và tên chỉ chứa ký tự chữ cái (a-z)(A-Z) và khoảng trắng&$user_data");
+	    exit();
+	}
+	else if(empty($pass)){
         header("Location: Joinwithus.php?error=Mật khẩu không được để trống&$user_data");
+	    exit();
+	}
+	else if(!preg_match("/^([\w_\.!@#$%^&*()]+){4,31}$/",$pass)) {
+        header("Location: Joinwithus.php?error=Mật khẩu phải có độ dài từ 4 đến 32 và không chứa ký tự đặc biệt");
 	    exit();
 	}
 	else if(empty($re_pass)){
         header("Location: Joinwithus.php?error=Xác nhận mật khẩu không được để trống&$user_data");
 	    exit();
 	}
-
-	else if(empty($name)){
-        header("Location: Joinwithus.php?error=Họ và tên không được để trống&$user_data");
-	    exit();
-	}
-
 	else if($pass !== $re_pass){
         header("Location: Joinwithus.php?error=Mật khẩu xác nhận không chính xác, vui lòng thử lại&$user_data");
 	    exit();
 	}
-
 	else{
 
 	    $sql = "SELECT * FROM users WHERE user='$user' ";

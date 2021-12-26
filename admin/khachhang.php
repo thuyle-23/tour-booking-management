@@ -319,7 +319,7 @@ function adduser() {
         $('#completepass').focus();
         return false;
     } else if (!reg_pass.test(thempass)) {
-        alert('Mật khẩu phải có độ dài từ 6 đến 32 và không chứa ký tự đặc biệt.');
+        alert('Mật khẩu phải có độ dài từ 4 đến 32 và không chứa ký tự đặc biệt.');
         $('#completepass').focus();
         return false;
     } else if (themname.trim() == '') {

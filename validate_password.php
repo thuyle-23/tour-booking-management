@@ -23,10 +23,16 @@ if (isset($_POST['uname']) && isset($_POST['npw'])
 	if(empty($opw)){
       header("Location: change_password.php?error=Không để trống mật khẩu cũ");
 	  exit();
-    }else if(empty($npw)){
+    }
+	else if(empty($npw)){
       header("Location: change_password.php?error=Không để trống mật khẩu mới");
 	  exit();
-    }else if($npw !== $cpw){
+    }
+	else if(!preg_match("/^([\w_\.!@#$%^&*()]+){4,31}$/",$npw)) {
+        header("Location: change_password.php?error=Mật khẩu phải có độ dài từ 4 đến 32 và không chứa ký tự đặc biệt");
+	    exit();
+	}
+	else if($npw !== $cpw){
       header("Location: change_password.php?error=Mật khẩu xác nhận không chính xác");
 	  exit();
     }else {

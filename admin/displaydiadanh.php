@@ -26,7 +26,6 @@ if(isset($_POST['displaySend'])){
         $noidung=$row['noidung'];
         $ngaydang=$row['ngaydang'];
         $luotxem=$row['luotxem'];
-        // $id=$row['id'];
         $sotien1nguoi=$row['sotien1nguoi'];
 
         $table.=' <tr>
