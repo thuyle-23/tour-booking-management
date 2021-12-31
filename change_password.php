@@ -38,13 +38,13 @@
                 <p class="success"><?php echo $_GET['success']; ?></p>
                 <?php } ?>
                 <label for="fullname" class="signin-label">Tên đăng nhập<span class="text-danger"> *</span></label>
-                <input type="text" id="uname" class="signin-input" placeholder="Eg: John Doe" name="uname">
+                <input type="text" id="uname" class="signin-input" placeholder="Eg: John Doe" name="uname" required>
                 <label for="fullname" class="signin-label">Mật khẩu cũ<span class="text-danger"> *</span></label>
-                <input type="password" id="opw" class="signin-input" placeholder="abc123" name="opw">
+                <input type="password" id="opw" class="signin-input" placeholder="abc123" name="opw" required>
                 <label for="password" class="signin-label">Mật khẩu mới<span class="text-danger"> *</span></label>
-                <input type="password" id="npw" class="signin-input" placeholder="abc123" name="npw">
+                <input type="password" id="npw" class="signin-input" placeholder="abc123" name="npw" required>
                 <label for="password" class="signin-label">Xác nhận mật khẩu mới<span class="text-danger"> *</span></label>
-                <input type="password" id="cpw" class="signin-input" placeholder="abc123" name="cpw">
+                <input type="password" id="cpw" class="signin-input" placeholder="abc123" name="cpw" required>
                 <button class="signin-submit" id="dangnhap" name="dangnhap">Xác nhận</button>
 
                 <p class="signin-enror">

@@ -100,7 +100,8 @@ h3 {
                     <div class="form-group">
                         <br>
                         <label for="updateuser">Tên đăng nhập <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="updateuser" placeholder="Nhập tên đăng nhập">
+                        <input type="text" class="form-control" id="updateuser" placeholder="Nhập tên đăng nhập" onInput="checkUsername()">
+                        <span id="check-username"></span>
                     </div>
                     <div class="form-group">
                         <label for="updatepass">Mật khẩu <span class="text-danger">*</span></label>
@@ -156,6 +157,19 @@ h3 {
 $(document).ready(function() {
     displayData();
 });
+
+function checkUsername() {
+    
+    jQuery.ajax({
+    url: "check_availability.php",
+    data:'updateuser='+$("#updateuser").val(),
+    type: "POST",
+    success:function(data){
+        $("#check-username").html(data);
+    },
+    error:function (){}
+    });
+}
 
 //Delete record
 function DeleteUser(deleteid) {
@@ -359,11 +373,21 @@ function adduser() {
             },
             success: function(data, status) {
                 displayData();
-                Swal.fire({
-                    title: "Thêm khách hàng thành công",
-                    icon: "success",
-                    timer: 3000
-                });
+                var data = JSON.parse(data);
+                if (data.statusCode == 200) {
+                    Swal.fire({
+                        title: "Thêm khách hàng thành công",
+                        icon: "success",
+                        timer: 3000
+                    });
+                } else if (data.statusCode == 201) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Không thể thêm khách hàng',
+                        text: 'Tên đăng nhập đã tồn tại',
+                        timer: 3000
+                    })
+                }
             }
         })
     }

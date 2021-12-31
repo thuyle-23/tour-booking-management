@@ -2,7 +2,7 @@
 
 include "1connect.php";
 
-if (isset($_POST['user']) && isset($_POST['pass'])) {
+if (isset($_POST['dangnhap'])) {
 
 	function validate($data){
        $data = trim($data);

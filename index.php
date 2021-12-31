@@ -83,7 +83,7 @@
                 </div>
                 <div style="padding-left: 250px;">
                     <form class="form-inline" action="index.php" method="post">
-                        <input class="form-control mr-sm-2" type="text" style="width: 600px;" placeholder="Nhập địa điểm cần tìm..." name="tukhoa">
+                        <input class="form-control mr-sm-2" type="text" style="width: 600px;" placeholder="Nhập địa điểm cần tìm..." name="tukhoa" autocomplete="off">
                         <button class="btn btn-outline-info" type="submit" name="timkiem">Tìm kiếm</button>
                     </form>
                 </div>
